@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de carros</title>
+</head>
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <h1>Cadastro de Carros</h1>
+    <label for="modelo">Modelo:</label>
+    <input type="text" id="modelo" name="modelo"> <br>
+    <label for="marca">Marca:</label>
+    <input type="text" id="marca" name="marca"> <br>    
+    <label for="year">Year:</label>
+    <input type="number" id="year" name="year"> <br>
+    <label for="obs">Observações:</label>
+    <input type="text" id="obs" name="obs"> <br>
+    <label for="valor">Valor da diária:</label>
+    <input type="number" id="valor" name="valor"> <br>
+    <label for="status">Status:</label>
+    <input type="text" id="status" name="status"> <br>
+    <button type="button" onclick="createContact()">Create Contact</button>
+    <table id="contacts-table">
+        <thead>
+            <th>ID</th>
+            <th>Modelo</th>
+            <th>Marca</th>
+            <th>Year</th>
+            <th>Observações</th>
+            <th>Valor da diária</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </thead>
+        <tbody id="contacts-table-body">
+
+        </tbody>
+    </table>
+
+    <!-- <script src="./static/app.js">
+
+    </script> -->
+    <script src="{{url_for('static',filename='app.js')}}"></script>
+</body>
+</html>

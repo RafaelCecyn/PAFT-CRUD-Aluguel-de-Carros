@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluguel de Carros</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <div class="left_menu">
+        <div class="title" id="title"></div>
+        <div class="imagem">
+            <img id="picture" src="../static/imgs/padrao.jpg">
+        </div>
+    </div>
+    <form>
+        <div class="reservation">
+            <label for="reservation" class="lbl-reserva">RESERVATION</label>
+        </div>
+        <div class="carros">
+            <label for="carros">Selecione o seu carro:</label>
+            <select name="carros" id="carros" onchange="test()">
+                <option value="padrao" id="0" selected>...</option>
+                <option value="Uno" id="1">Uno</option>
+                <option value="mustang" id="2">mustang</option>
+                <option value="camry" id="3">camry</option>
+                <option value="corolla" id="4">corolla</option>
+                <option value="taurus" id="5">taurus</option>
+                <option value="maxima" id="6">maxima</option>
+                <option value="alliance convertible" id="7">alliance convertible</option>
+                <option value="500" id="8">500</option>
+                <option value="golf iii / gti" id="9">golf iii / gti</option>
+                <option value="740i" id="10">740i</option>
+            </select>
+        </div>
+        <div class="marca">
+            <label for="marca">Marca: </label>
+            <input type="text" id="marca" readonly>
+        </div>
+        <div class="ano">
+            <label for="ano">Ano: </label>
+            <input type="number" id="ano" readonly>
+        </div>
+        <div class="status">
+            <label for="status">Status: </label>
+            <input type="text" id="status" readonly>
+        </div>
+        <div class="obervacoes">
+            <label for="observacao">Observações: </label>
+            <input type="text" id="observacao" readonly>
+        </div>
+        <div class="diaria">
+            <label for="diaria">Valor da diária: </label>
+            <input type="text" id="diaria" readonly>
+        </div>
+
+        <div class="botao_reservar">
+            <input type="submit" value="Reserve" id="reserve" readonly>
+        </div>
+    </form>
+
+    </div>
+    <script src="{{url_for('static',filename='index.js')}}"></script>
+</body>
+
+</html>
